@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+body{font-family: "Exo", sans-serif;}
+
+.header{width: 400px; height: 100vh; background: linear-gradient(45deg,aqua,royalblue); padding: 250px  2vw 100px 2vw;  box-sizing: border-box; display: flex;  flex-direction: column; justify-content: space-between; color: #fff; position: fixed; left: 0; top: 0; transition: all 0.5s;}
+.title>p{font-size: 60px; font-weight: 500; line-height: 60px;}
+.line{width: 60%; border-top: 1px solid #fff; margin: 20px 0;}
+.title::after{content: "UI/UX DEVELOPMENT"; display: block;}
+.sns{display: flex; justify-content: space-around; }
+
+/*header 미디어쿼리*/
+@media all and (max-width:1599px){
+ .header{width:350px;}
+}
+@media all and (max-width:1199px){
+ .header{width: 100%; height: 80px; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
+ .title>p{font-size: 24px;}
+ .title>p>br{display: none;}
+ .line,.title::after{display: none;}
+ .sns>li{margin: 0 10px;}
+ .sns>li span{display: none;}
+ .sns>li{font-size: 20px;}
+
+}
+
+
+.main{margin-left: 400px; background-color: #efefef;  padding: 20px; box-sizing: border-box;}
+.btns{display: flex; justify-content: flex-end; }
+.btns>li{background-color: #fff; margin: 0 10px; padding: 5px 30px; font-size: 12px; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px rgba(0,0,0,0.15); color: #555;}
+.btns>li.active{background: linear-gradient(45deg,aqua,royalblue); color: #fff; box-shadow: 0 0 30px rgba(0, 255, 255,0.5)}
+
+.contents{margin-top: 30px; display: flex; flex-wrap: wrap;}
+.box{width: 20%; padding: 12px; box-sizing: border-box; }
+.inner{background-color: #fff; padding: 12px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.15);}
+.inner>a{display: block;}
+.inner img{width: 100%;}
+.inner p:nth-of-type(1){font-size: 14px; margin-top: 15px; font-weight: bold; color: #444;}
+.inner p:nth-of-type(2){font-size: 10px; margin-bottom: 15px; color: #555;}
+
+/* main 미디어쿼리*/
+@media all and (max-width:1599px) {
+ .header{position: absolute;}
+.main{margin-left: 350px;}
+.box{width: 25%;}
+}
+@media all and (max-width:1199px) {
+ .main{margin-left: 0px; padding-top: 100px;}
+}
+@media all and (max-width:900px) {
+.box{width: 33%;}
+}
+@media all and (max-width:680px) {
+ .box{width: 50%;}
+}
+@media all and (max-width:539px) {
+.box{width: 100%;}
+.btns>li{width: 30%; text-align: center; margin: 0 5px;}
+
+}
+
