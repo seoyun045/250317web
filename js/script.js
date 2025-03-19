@@ -14,3 +14,5 @@ $(".contents").isotope({filter:a})
 })
 
 $(".fancybox").fancybox();
+
+setTimeout(function(){$(".contents").isotope('layout)},100)
